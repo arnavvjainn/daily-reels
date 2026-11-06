@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Daily Reels — one educational reel every morning</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app">
+    <header class="top">
+      <div>
+        <p class="greeting" id="greeting">Good morning</p>
+        <h1>Daily Reels</h1>
+      </div>
+      <div class="streak" title="Days in a row you watched">🔥 <span id="streak">0</span></div>
+    </header>
+
+    <section class="today">
+      <p class="label" id="today-date">Today</p>
+      <article class="reel" id="reel">
+        <div class="reel-art" id="reel-art"><span id="reel-emoji"></span></div>
+        <div class="reel-overlay">
+          <span class="pill" id="reel-topic"></span>
+          <h2 id="reel-title"></h2>
+          <p class="creator"><span id="reel-creator"></span> · <span id="reel-duration"></span></p>
+          <p class="summary" id="reel-summary"></p>
+          <div class="actions">
+            <a class="btn primary" id="reel-link" target="_blank" rel="noopener">▶ Watch reel</a>
+            <button class="btn ghost" id="mark-watched">Mark watched</button>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <section>
+      <h3>Your topics</h3>
+      <p class="hint">The bot picks tomorrow's reel from these.</p>
+      <div class="chips" id="topics"></div>
+    </section>
+
+    <section>
+      <h3>Delivery</h3>
+      <div class="card settings">
+        <label>Send at <input type="time" id="send-time" value="07:30" /></label>
+        <label>Via
+          <select id="channel">
+            <option>Telegram</option>
+            <option>WhatsApp</option>
+            <option>Email</option>
+            <option>Push notification</option>
+          </select>
+        </label>
+      </div>
+      <p class="hint">Sample UI only — settings are saved in this browser, not sent to the bot yet.</p>
+    </section>
+
+    <section>
+      <h3>Past reels</h3>
+      <ul class="history" id="history"></ul>
+    </section>
+  </div>
+
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
