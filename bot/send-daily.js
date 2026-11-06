@@ -16,7 +16,7 @@ function buildMessage(reel, date = new Date()) {
 }
 
 async function deliver(message) {
-  // TODO: send via Telegram / WhatsApp / email / push.
+  // TODO: post to Discord.
   console.log(message);
 }
 

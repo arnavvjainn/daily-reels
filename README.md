@@ -42,9 +42,11 @@ node bot/send-daily.js
 
 This is a sample. The reels are placeholders (`example.com` links), and settings are saved in the browser only.
 
+## Decisions
+- **Bot runtime:** [OpenClaw](https://github.com/openclaw/openclaw)
+- **Sources:** Instagram Reels and YouTube Shorts
+- **Delivery:** Discord
+
 ## Open questions
-- Which crawler/agent framework does the bot run on?
-- Where do reels come from (Instagram, YouTube Shorts, TikTok, curated lists)?
-- How is the link delivered (Telegram, WhatsApp, email, push)?
-- Where does it run on a schedule (local cron or hosted)?
+- Where does it run on a schedule (local machine or a hosted server)?
 - Should the UI become a real app (Next.js / React Native) with a backend?

@@ -2,9 +2,9 @@
 
 The bot's job each morning:
 
-1. **Find reels.** Crawl or query sources for short educational videos (crawler/agent framework still to be decided).
+1. **Find reels.** Use OpenClaw to find short educational videos on Instagram Reels and YouTube Shorts.
 2. **Pick one.** Choose today's reel based on the user's topics and what they've already seen.
-3. **Deliver.** Send the link at the user's chosen time over their chosen channel.
+3. **Deliver.** Post the link to Discord at the user's chosen time.
 
 Right now `send-daily.js` only does step 2, using the sample data in `../web/data.js`, and prints the message:
 
@@ -13,7 +13,7 @@ node bot/send-daily.js
 ```
 
 ## TODO
-- [ ] Choose a crawler/agent framework and content sources
+- [ ] Set up OpenClaw and have it find reels on Instagram and YouTube Shorts
 - [ ] Store reels and watch history (SQLite or similar)
-- [ ] Delivery channel (Telegram bot is the easiest place to start)
-- [ ] Scheduling (cron, launchd, or a hosted scheduler)
+- [ ] Send the message to Discord
+- [ ] Run it every morning (OpenClaw's scheduler, cron, or launchd)
